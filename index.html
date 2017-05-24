@@ -27,15 +27,15 @@
 			<div class="slides">
 			{% for post in site.posts %}
 				{% if  post.is_slide }
-				<section>
+				<section data-markdown>
+				  <textarea data-template>
 					<h2>{{ page.title }}</h2>
 					{{ content }}
+				  </textarea>
 				</section>
 				{% endif }
 			{% endfor %}
-				
 				<section>Slide 2</section>
-				
 			</div>
 		</div>
 
