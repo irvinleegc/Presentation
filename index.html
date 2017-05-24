@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Sample Presentation with Reveal.js</title>
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 		<!-- Theme used for syntax highlighting of code -->
@@ -22,7 +22,7 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-			{% for post in site.posts %}
+				{% for post in site.posts %}
 				{% if  post.is_slide }
 				<section data-markdown>
 				  <textarea data-template>
@@ -31,7 +31,7 @@
 				  </textarea>
 				</section>
 				{% endif }
-			{% endfor %}
+				{% endfor %}
 				
 				<section data-markdown="README.md"  
 					 data-separator="^\n\n\n"  
